@@ -12,6 +12,7 @@ body {
 .wrapper {
     height: 100vh;
     overflow-y: auto;
+    overflow-x: hidden;
     perspective: 10px;
 }
 
@@ -21,10 +22,42 @@ header {
     justify-content: center;
     align-items: center;
     height: 100%;
-    font-size: 7rem;
-    color: white;
     transform-style: preserve-3d;
     z-index: -1;
+}
+
+.me {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 7rem;
+    color: white;
+    margin-bottom: -1rem;
+}
+
+.job {
+    color: white;
+    font-size: 6rem;
+}
+
+.desc {
+    background: linear-gradient(to left, #ffffff, #8ebfff, #ff78f8, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    } 
 }
 
 .background1, .background2, .background3 {
@@ -36,25 +69,24 @@ header {
 
 .background1 {
     background: linear-gradient(to right top , #ca43ff, #5b94ff);
+    transform: translateZ(-10px) scale(2);
 }
 
 .background2 {
-    top: 7%;
-    right: 6%;
+    top: -14%;
+    right: -25%;
     height: 300px;
     width: 300px;
-    background: linear-gradient(to left bottom , #5b94ff, #ffffff);
-    border-radius: 50%;
-    /* transform: translateZ(-9px); */
+    transform: translateZ(-8px) scale(1.8);
+    
 }
 
 .background3 {
-    top: 52%;
-    left: 6%;
+    bottom: -7%;
+    left: -8%;
     height: 230px;
     width: 230px;
-    background: linear-gradient(to left bottom , #ffffff, #ca43ff);
-    border-radius: 50%;
+    transform: translateZ(-4px) scale(1);
 }
 
 section {
@@ -62,4 +94,41 @@ section {
     padding: 2rem;
     background-color: #333;
     color: white;
+    text-align: center;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+@media screen and (max-width: 425px){
+
+    .background2 {
+        top: -14%;
+        right: -25%;
+        height: 190px;
+        width: 190px;
+        transform: translateZ(-8px) scale(1.8);
+        
+    }
+
+    .background3 {
+        bottom: -3%;
+        left: -15%;
+        height: 150px;
+        width: 150px;
+        transform: translateZ(-4px) scale(1);
+    }
+
+    .name {
+        font-size: 3rem;
+        margin-bottom: -.3rem;
+    }
+
+    .job {
+        font-size: 2.5rem;
+    }
+    
+    section {
+        font-size: 1.3rem;
+    }
 }
