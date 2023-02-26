@@ -22,7 +22,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100svh;
+    height: 100vh;
     transform-style: preserve-3d;
     z-index: -1;
 }
@@ -202,6 +202,10 @@ section {
 }
 
 @media screen and (max-width: 600px){
+    header {
+        height: 100svh;
+    }
+
 
     .background2 {
         top: -15%;
