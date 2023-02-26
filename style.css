@@ -22,7 +22,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100svh;
     transform-style: preserve-3d;
     z-index: -1;
 }
