@@ -3,7 +3,6 @@
     --black: #333;
     --white: #fff;
     --pink: #ff78f8;
-
 }
 
 * {
@@ -165,7 +164,7 @@ header {
 
 .background1 {
     background: linear-gradient(to right top, #ca43ff, #5b94ff);
-    transform: translateZ(-10px) scale(2);
+    transform: translateZ(-10px) scale(2.1);
 }
 
 .background2 {
@@ -253,11 +252,84 @@ section {
     transform: scale(1.03);
 }
 
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    border-bottom: 1px solid #ff78f867;
+}
+
+.nav-link {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.item {
+    position: relative;
+    text-decoration: none;
+    color: var(--white);
+    outline: transparent;
+}
+
+.item::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: linear-gradient(to right top, var(--pink), var(--pink), var(--aqua), var(--white));
+    z-index: -1;
+    filter: blur(1rem);
+    transition: all 200ms ease-in-out;
+}
+
+.gallery {
+    font-size: 1.8rem;
+    transition: transform 200ms ease-in-out;
+}
+
+.my-work {
+    font-size: 1.8rem;
+    transition: transform 200ms ease-in-out;
+}
+
+.about {
+    font-size: 1.8rem;
+    transition: transform 200ms ease-in-out;
+}
+
+.gallery:hover, .gallery:focus {
+    transform: scale(.9);
+}
+
+.my-work:hover, .my-work:focus {
+    transform: scale(.9);
+}
+
+.about:hover, .about:focus {
+    transform: scale(.9);
+}
+
+.item:hover::before, .item:focus::before {
+    transform: translate(-50%, -50%) scale(2);
+}
+
 @media screen and (max-width: 600px) {
     header {
         height: 100svh;
     }
-
 
     .background2 {
         top: -15%;
@@ -351,6 +423,21 @@ section {
         padding: 0 1rem;
     }
 
+    .gallery {
+        font-size: 1rem;
+    }
+    
+    .my-work {
+        font-size: 1rem;
+    }
+    
+    .about {
+        font-size: 1rem;
+    }
+
+    .item:hover::before, .item:focus::before {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
 
 }
 
