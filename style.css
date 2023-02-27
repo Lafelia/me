@@ -423,6 +423,10 @@ section {
         padding: 0 1rem;
     }
 
+    .sticky-nav {
+        height: 8vh;
+    }
+
     .gallery {
         font-size: 1rem;
     }
