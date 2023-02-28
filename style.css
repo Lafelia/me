@@ -47,6 +47,7 @@ header.parallax {
 
 .aftiyan {
     position: relative;
+    pointer-events: none;
 }
 
 .aftiyan::before {
@@ -383,6 +384,7 @@ section.experience {
     width: max-content;
     z-index: 1;  
     cursor: pointer;
+    pointer-events: none;
 }
 
 .exp-company > p::before {
