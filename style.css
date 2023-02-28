@@ -265,7 +265,7 @@ section.bentar {
     justify-content: center;
     box-sizing: border-box;
     overflow-y: hidden;
-    border-bottom: 1px solid #ff78f867;
+    border-bottom: 1px solid #505050;
     z-index: 10;
 }
 
@@ -282,7 +282,6 @@ section.bentar {
     text-decoration: none;
     color: var(--white);
     outline: transparent;
-    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -297,7 +296,7 @@ section.bentar {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    background: linear-gradient(to right top, #ff78f8, #f183ff, #e48cff, #d695ff, #c89cff, #bba3ff, #afaaff, #a5afff, #9cb4ff, #95b8ff, #90bcff, #8ebfff, #8ebfff, #9ac5ff, #a5caff, #b0d0ff, #bbd6ff, #c5dbff, #cfe1ff, #d9e7ff, #e3edff, #ecf3ff, #f6f9ff, #ffffff);
+    background: linear-gradient(90deg, #ff78f8, #f47aff, #e27cff, #d17eff, #c180ff, #b182ff, #a284ff, #9386ff, #888bff, #8a9dff, #8caeff, #8ebfff);
     z-index: -1;
     filter: blur(1rem);
     transition: all 200ms ease-in-out;
@@ -335,7 +334,6 @@ section.bentar {
 }
 
 section.experience {
-    height: 100vh;
     width: 100%;
     padding: 2.5rem 2rem;
     background-color: var(--white);
@@ -348,6 +346,7 @@ section.experience {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 3rem;
 }
 
 .title {
@@ -355,6 +354,7 @@ section.experience {
     font-size: 2.4rem;
     position: relative;
     height: 100%;
+    z-index: 1;
 }
 
 .title::before {
@@ -365,6 +365,52 @@ section.experience {
     right: 0;
     background: linear-gradient(90deg, #ff78f8, #f183ff, #e48cff, #d695ff, #c89cff, #bba3ff, #afaaff, #a5afff, #9cb4ff, #95b8ff, #90bcff, #8ebfff);
     height: 4px;
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.exp-detail {
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+.exp-company {
+    font-size: 3rem;
+}
+
+.exp-company > p {
+    position: relative;  
+    width: max-content;
+    z-index: 1;  
+    cursor: pointer;
+}
+
+.exp-company > p::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform-origin: left;
+    transform: scaleX(0);
+    height: 4px;
+    background: linear-gradient(90deg, #ff78f8, #f183ff, #e48cff, #d695ff, #c89cff, #bba3ff, #afaaff, #a5afff, #9cb4ff, #95b8ff, #90bcff, #8ebfff);
+    z-index: -1;
+    transition: transform 200ms ease-in-out;
+    border-radius: 4px;
+}
+
+.exp-company > p:hover::before {
+    transform: scaleX(1);
+}
+
+.exp-job {
+    font-size: 1.2rem;
+}
+
+.exp-date {
+    color: #555;
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -481,11 +527,15 @@ section.experience {
     }
 
     .item:hover::before, .item:focus::before {
-        transform: translate(-50%, -50%) scale(1.5);
+        transform: translate(-50%, -50%) scale(2);
     }
 
     section.experience {
-        padding: .9rem .5rem;
+        padding: 1.5rem .5rem;
+    }
+
+    .header-wrapper {
+        margin-bottom: 1.5rem;
     }
 
     .title {
@@ -494,6 +544,26 @@ section.experience {
 
     .title::before {
         height: 3px;
+    }
+
+    .exp-company {
+        font-size: 1.8rem;
+    }
+
+    .exp-company > p::before {
+        height: 3px;
+    }
+
+    .exp-job {
+        font-size: .9rem;
+    }
+
+    .exp-date {
+        font-size: .8rem;
+    }
+
+    .exp-desc {
+        font-size: .8rem;
     }
 
 }
