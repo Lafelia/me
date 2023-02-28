@@ -24,7 +24,7 @@ body {
     perspective: 10px;
 }
 
-header {
+header.parallax {
     position: relative;
     display: flex;
     justify-content: center;
@@ -54,7 +54,8 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, #a7cdff, #ff9ffa, var(--white));
+    /* background: linear-gradient(to right, #a7cdff, #ff9ffa, var(--white)); */
+    background: linear-gradient(to right, #8ebfff, #90bcff, #95b8ff, #9cb4ff, #a5afff, #afaaff, #bba3ff, #c89cff, #d695ff, #e48cff, #f183ff, #ff78f8, #ff78f8, #ff86f9, #ff94fa, #ffa1fa, #ffadfb, #ffb9fc, #ffc5fd, #ffd1fd, #ffddfe, #ffe8fe, #fff4ff, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: 0%;
@@ -73,7 +74,7 @@ header {
     transform-origin: right;
     transform: scaleX(0);
     z-index: -1;
-    background: linear-gradient(to right, #a7cdff, #ff9ffa, var(--white));
+    background: linear-gradient(to right,  #8ebfff, #90bcff, #95b8ff, #9cb4ff, #a5afff, #afaaff, #bba3ff, #c89cff, #d695ff, #e48cff, #f183ff, #ff78f8, #ff78f8, #ff86f9, #ff94fa, #ffa1fa, #ffadfb, #ffb9fc, #ffc5fd, #ffd1fd, #ffddfe, #ffe8fe, #fff4ff, #ffffff);
     transition: all 150ms ease-in;
 }
 
@@ -91,7 +92,8 @@ header {
 }
 
 .desc {
-    background: linear-gradient(to left, #ffffff, #8ebfff, #ff78f8, #ffffff);
+    /* background: linear-gradient(to left, #ffffff, #8ebfff, #ff78f8, #ffffff); */
+    background: linear-gradient(to left, #ffffff, #f6f9ff, #ecf3ff, #e3edff, #d9e7ff, #cfe1ff, #c5dbff, #bbd6ff, #b0d0ff, #a5caff, #9ac5ff, #8ebfff, #8ebfff, #90bcff, #95b8ff, #9cb4ff, #a5afff, #afaaff, #bba3ff, #c89cff, #d695ff, #e48cff, #f183ff, #ff78f8, #ff78f8, #ff86f9, #ff94fa, #ffa1fa, #ffadfb, #ffb9fc, #ffc5fd, #ffd1fd, #ffddfe, #ffe8fe, #fff4ff, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200%;
@@ -163,7 +165,7 @@ header {
 }
 
 .background1 {
-    background: linear-gradient(to right top, #ca43ff, #5b94ff);
+    background: linear-gradient(to right top, #ca43ff, #be51ff, #b25dff, #a666ff, #9b6eff, #8f76ff, #847cff, #7a82ff, #7087ff, #678cff, #6090ff, #5b94ff);
     transform: translateZ(-10px) scale(2.1);
 }
 
@@ -206,7 +208,7 @@ header {
     transform: translateZ(-6px) scale(1.5);
 }
 
-section {
+section.bentar {
     font-size: 2.4rem;
     padding: 2rem;
     background-color: #333;
@@ -264,6 +266,7 @@ section {
     box-sizing: border-box;
     overflow-y: hidden;
     border-bottom: 1px solid #ff78f867;
+    z-index: 10;
 }
 
 .nav-link {
@@ -294,7 +297,7 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    background: linear-gradient(to right top, var(--pink), var(--pink), var(--aqua), var(--white));
+    background: linear-gradient(to right top, #ff78f8, #f183ff, #e48cff, #d695ff, #c89cff, #bba3ff, #afaaff, #a5afff, #9cb4ff, #95b8ff, #90bcff, #8ebfff, #8ebfff, #9ac5ff, #a5caff, #b0d0ff, #bbd6ff, #c5dbff, #cfe1ff, #d9e7ff, #e3edff, #ecf3ff, #f6f9ff, #ffffff);
     z-index: -1;
     filter: blur(1rem);
     transition: all 200ms ease-in-out;
@@ -331,8 +334,41 @@ section {
     transform: translate(-50%, -50%) scale(2);
 }
 
+section.experience {
+    height: 100vh;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    background-color: var(--white);
+    box-sizing: border-box;
+}
+
+.header-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    color: var(--black);
+    font-size: 2.4rem;
+    position: relative;
+    height: 100%;
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #ff78f8, #f183ff, #e48cff, #d695ff, #c89cff, #bba3ff, #afaaff, #a5afff, #9cb4ff, #95b8ff, #90bcff, #8ebfff);
+    height: 4px;
+}
+
 @media screen and (max-width: 600px) {
-    header {
+    header.parallax {
         height: 100svh;
     }
 
@@ -410,7 +446,7 @@ section {
         border-radius: 5px;
     }
 
-    section {
+    section.bentar {
         height: 100svh;
         font-size: 1.3rem;
     }
@@ -448,10 +484,22 @@ section {
         transform: translate(-50%, -50%) scale(1.5);
     }
 
+    section.experience {
+        padding: .9rem .5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .title::before {
+        height: 3px;
+    }
+
 }
 
 @media screen and (max-width: 320px) {
-    header {
+    header.parallax {
         height: 100svh;
     }
 
@@ -500,7 +548,7 @@ section {
         padding: 0 .9rem;
     }
 
-    section {
+    section.bentar {
         font-size: 1rem;
     }
 
