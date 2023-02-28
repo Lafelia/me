@@ -279,11 +279,16 @@ section {
     text-decoration: none;
     color: var(--white);
     outline: transparent;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .item::before {
     content: '';
-    width: 100%;
+    width: 30%;
     height: 100%;
     position: absolute;
     top: 50%;
