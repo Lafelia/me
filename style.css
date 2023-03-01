@@ -92,7 +92,6 @@ header.parallax {
 }
 
 .desc {
-    /* background: linear-gradient(to left, #ffffff, #8ebfff, #ff78f8, #ffffff); */
     background: linear-gradient(to left, #ffffff, #f6f9ff, #ecf3ff, #e3edff, #d9e7ff, #cfe1ff, #c5dbff, #bbd6ff, #b0d0ff, #a5caff, #9ac5ff, #8ebfff, #8ebfff, #90bcff, #95b8ff, #9cb4ff, #a5afff, #afaaff, #bba3ff, #c89cff, #d695ff, #e48cff, #f183ff, #ff78f8, #ff78f8, #ff86f9, #ff94fa, #ffa1fa, #ffadfb, #ffb9fc, #ffc5fd, #ffd1fd, #ffddfe, #ffe8fe, #fff4ff, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -494,7 +493,6 @@ section.experience {
         height: 190px;
         width: 190px;
         transform: translateZ(-9px) scale(2);
-
     }
 
     .background3 {
@@ -653,7 +651,6 @@ section.experience {
     .kotak3 {
         height: 195px;
         width: 195px;
-        border-radius: 50%;
         bottom: -7%;
         right: -12%;
     }
@@ -663,7 +660,6 @@ section.experience {
         width: 230px;
         top: -15%;
         left: -20%;
-        border-radius: 50%;
     }
     
     .kotak5 {
