@@ -338,6 +338,9 @@ section.experience {
     padding: 2.5rem 2rem;
     background-color: var(--white);
     box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
 .header-wrapper {
@@ -367,6 +370,10 @@ section.experience {
     height: 4px;
     z-index: -1;
     border-radius: 4px;
+}
+
+.exp-wrapper {
+    z-index: 1;
 }
 
 .exp-detail {
@@ -411,6 +418,69 @@ section.experience {
 .exp-date {
     color: #555;
     margin-bottom: 1rem;
+}
+
+.kotak {
+    position: absolute;
+    z-index: -1;
+}
+
+.kotak1 {
+    height: 15px;
+    width: 450px;
+    background: #3333331e;
+    top: 5%;
+    right: -1%;
+}
+
+.kotak2 {
+    height: 15px;
+    width: 500px;
+    background: #3333331e;
+    bottom: 7%;
+    left: -1%;
+}
+
+.kotak3 {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background: #ff78f82a;
+    bottom: -15%;
+    right: -5%;
+}
+
+.kotak4 {
+    height: 600px;
+    width: 600px;
+    background: #8ebfff36;
+    top: -40%;
+    left: -15%;
+    border-radius: 50%;
+}
+
+.kotak5 {
+    height: 15px;
+    width: 300px;
+    background: #ff78f83b;
+    top: 10%;
+    right: -1%;
+}
+
+.kotak6 {
+    height: 15px;
+    width: 500px;
+    background: #8ebfff48;
+    top: 15%;
+    right: -1%;
+}
+
+.kotak7 {
+    height: 15px;
+    width: 400px;
+    background: #ff78f83b;
+    bottom: 3%;
+    left: -1%;
 }
 
 @media screen and (max-width: 600px) {
@@ -564,6 +634,57 @@ section.experience {
 
     .exp-desc {
         font-size: .8rem;
+    }
+
+    .kotak1 {
+        height: 8px;
+        width: 100px;
+        top: 10%;
+        right: -1%;
+    }
+    
+    .kotak2 {
+        height: 8px;
+        width: 165px;
+        bottom: 5%;
+        left: -1%;
+    }
+    
+    .kotak3 {
+        height: 195px;
+        width: 195px;
+        border-radius: 50%;
+        bottom: -7%;
+        right: -12%;
+    }
+    
+    .kotak4 {
+        height: 230px;
+        width: 230px;
+        top: -15%;
+        left: -20%;
+        border-radius: 50%;
+    }
+    
+    .kotak5 {
+        height: 8px;
+        width: 120px;
+        top: 12%;
+        right: -1%;
+    }
+    
+    .kotak6 {
+        height: 8px;
+        width: 80px;
+        top: 14%;
+        right: -1%;
+    }
+    
+    .kotak7 {
+        height: 8px;
+        width: 100px;
+        bottom: 3%;
+        left: -1%;
     }
 
 }
