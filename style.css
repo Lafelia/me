@@ -208,15 +208,31 @@ header.parallax {
 }
 
 section.bentar {
-    font-size: 2.4rem;
     padding: 2rem;
     background-color: #333;
     color: white;
     text-align: center;
-    height: 100vh;
-    display: grid;
-    place-items: center;
+    height: 100vh;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
 }
+
+.sabar-wrapper {
+    height: 90%;
+    font-size: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.love-wrapper {
+    font-size: .9rem;
+    height: 10%;
+}
+
 
 .navbar {
     position: absolute;
@@ -230,7 +246,7 @@ section.bentar {
     height: 10vh;
     backdrop-filter: blur(.5rem);
     box-shadow: 0px 2px 40px #3333333b;
-    padding: 1rem 2rem;
+    padding: .5rem 2rem;
 }
 
 .nav-brand {
@@ -264,11 +280,11 @@ section.bentar {
     height: 100%;
     box-sizing: border-box;
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .fa-brands {
-    transition: all 200ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 
 .instagram, 
@@ -470,6 +486,11 @@ section.experience {
     margin-bottom: 1rem;
 }
 
+/* .exp-detail:nth-child(3) .exp-desc {
+    font-size: 1.2rem;
+    text-align: center;
+} */
+
 .kotak {
     position: absolute;
     z-index: -1;
@@ -613,12 +634,20 @@ section.experience {
 
     section.bentar {
         height: 100svh;
-        font-size: 1.3rem;
+        overflow: hidden;
+    }
+
+    .sabar-wrapper {
+        font-size: 1.5rem;
+    }
+
+    .love-wrapper {
+        font-size: .5rem;
     }
 
     .navbar {
         height: 8vh;
-        padding: .5rem;
+        padding: .55rem;
     }
 
     .logo {
