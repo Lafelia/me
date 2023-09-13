@@ -220,37 +220,88 @@ section.bentar {
 
 .navbar {
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
+    box-sizing: border-box;
     height: 10vh;
     backdrop-filter: blur(.5rem);
     box-shadow: 0px 2px 40px #3333333b;
+    padding: 1rem 2rem;
 }
 
 .nav-brand {
     height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 2rem;
 }
 
 .logo {
+    height: 100%;
     text-decoration: none;
-    color: #ffffff;
+    color: var(--white);
     font-size: 2.4rem;
     background: linear-gradient(to left top, rgba(255, 255, 255, .5), rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
     padding: 0 2rem .4rem 2rem;
     border-radius: 10px;
     transition: all 200ms ease-in-out;
     outline: transparent;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .logo:hover,
 .logo:focus {
     background-color: #8ebfff;
     color: #193f70;
-    transform: scale(1.03);
+}
+
+.icon-group {
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.fa-brands {
+    transition: all 200ms ease-in-out;
+}
+
+.instagram, 
+.github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left top, rgba(255, 255, 255, .5), rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    border-radius: 10px;
+    transition: all 200ms ease-in-out;
+    outline: transparent;
+    text-decoration: none;
+    aspect-ratio: 1/1;
+}
+
+.instagram:hover,
+.instagram:focus {
+    background-color: #8ebfff;
+}
+
+.instagram:hover .fa-instagram,
+.instagram:focus .fa-instagram {
+    color: #193f70 !important;
+}
+
+.github:hover,
+.github:focus {
+    background-color: #8ebfff;
+}
+
+.github:hover .fa-github,
+.github:focus .fa-github {
+    color: #193f70 !important;
 }
 
 .sticky-nav {
@@ -567,15 +618,25 @@ section.experience {
 
     .navbar {
         height: 8vh;
+        padding: .5rem;
     }
 
     .logo {
-        font-size: 1.5rem;
-        padding: 0 1rem .25rem 1rem;
+        font-size: 1.8rem;
+        padding: 0 1rem 0 1rem;
     }
 
-    .nav-brand {
-        padding: 0 1rem;
+    .icon-group {
+        gap: .5rem;
+    }
+
+    .instagram,
+    .github {
+        padding: .5rem;
+    }
+
+    .fa-brands {
+        font-size: 1.3rem !important;
     }
 
     .sticky-nav {
